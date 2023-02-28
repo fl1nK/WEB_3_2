@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: left;
+      }
+
+      h3 {
+        text-align: right;
+      }
+
+      div {
+        border: 1px solid black;
+        padding: 10px;
+        width: 200px;
+        height: 200px;
+        text-align: justify;
+      }
+
+      p.a {
+        text-align-last: right;
+      }
+      p.b {
+        text-align-last: center;
+      }
+      p.c {
+        text-align-last: justify;
+      }
+
+      p.ex1 {
+        direction: rtl;
+        unicode-bidi: bidi-override;
+      }
+
+      img.top {
+        vertical-align: top;
+      }
+
+      img.middle {
+        vertical-align: middle;
+      }
+
+      img.bottom {
+        vertical-align: bottom;
+      }
+
+      p.uppercase {
+        text-transform: uppercase;
+      }
+
+      p.lowercase {
+        text-transform: lowercase;
+      }
+
+      p.capitalize {
+        text-transform: capitalize;
+      }
+
+      h1 {
+        letter-spacing: 3px;
+      }
+
+      h2 {
+        letter-spacing: -3px;
+      }
+      p.small {
+        line-height: 0.7;
+      }
+
+      p.big {
+        line-height: 1.8;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Заголовок 1 (center)</h1>
+    <h2>Заголовок 2 (left)</h2>
+    <h3>Заголовок 3 (right)</h3>
+
+    <p>Три заголовка выше выровнены по центру, слева и справа.</p>
+
+    <h1>Пример text-align: justify;</h1>
+
+    <p>
+      text-align: justify; значение растягивает линии так, чтобы каждая линия
+      имела одинаковую ширину (как в газетах и журналах).
+    </p>
+
+    <div>
+      In my younger and more vulnerable years my father gave me some advice that
+      I've been turning over in my mind ever since. 'Whenever you feel like
+      criticizing anyone,' he told me, 'just remember that all the people in
+      this world haven't had the advantages that you've had.'
+    </div>
+
+    <h1>Властивість text-align-last</h1>
+
+    <h2>text-align-last: right:</h2>
+    <p class="a">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam
+      at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus
+      diam, consequat gravida libero rhoncus ut.
+    </p>
+
+    <h2>text-align-last: center:</h2>
+    <p class="b">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam
+      at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus
+      diam, consequat gravida libero rhoncus ut.
+    </p>
+
+    <h2>text-align-last: justify:</h2>
+    <p class="c">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam
+      at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus
+      diam, consequat gravida libero rhoncus ut.
+    </p>
+
+    <p>Это направление текста по умолчанию.</p>
+
+    <p class="ex1">Это направление текста справа налево.</p>
+
+    <p>
+      Это
+      <img
+        src="https://w3schoolsua.github.io/images/w3schools_logo.gif"
+        alt="W3Schools"
+        width="270"
+        height="50"
+      />
+      изображение с выравниванием по умолчанию.
+    </p>
+    <br />
+
+    <p>
+      Это
+      <img
+        class="top"
+        src="https://w3schoolsua.github.io/images/w3schools_logo.gif"
+        alt="W3Schools"
+        width="270"
+        height="50"
+      />
+      изображение с выравниванием по верхнему краю.
+    </p>
+    <br />
+
+    <p>
+      Это
+      <img
+        class="middle"
+        src="https://w3schoolsua.github.io/images/w3schools_logo.gif"
+        alt="W3Schools"
+        width="270"
+        height="50"
+      />
+      изображение с выравниванием по середине.
+    </p>
+    <br />
+
+    <p>
+      Это
+      <img
+        class="bottom"
+        src="https://w3schoolsua.github.io/images/w3schools_logo.gif"
+        alt="W3Schools"
+        width="270"
+        height="50"
+      />
+      изображение с выравниванием по низу.
+    </p>
+
+    <p class="uppercase">Это какой-то текст.</p>
+    <p class="lowercase">Это какой-то текст.</p>
+    <p class="capitalize">Это какой-то текст.</p>
+    <h1>Это заголовок 1</h1>
+    <h2>Это заголовок 2</h2>
+
+    <p>
+      Это параграф со стандартной высотой строки.<br />
+      Высота строки по умолчанию в большинстве браузеров составляет от 110% до
+      120%.<br />
+    </p>
+
+    <p class="small">
+      Это параграф с меньшей высотой строки.<br />
+      Это параграф с меньшей высотой строки.<br />
+    </p>
+
+    <p class="big">
+      Это параграф с большей высотой строки.<br />
+      Это параграф с большей высотой строки.<br />
+    </p>
+
+    <h1 style="text-shadow: 2px 2px 5px red">Эффект тени текста!</h1>
+  </body>
+</html>

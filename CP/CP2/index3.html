@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+
+    <style>
+      .p1 {
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      .p2 {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .p3 {
+        font-family: "Lucida Console", "Courier New", monospace;
+      }
+
+      p.normal {
+        font-style: normal;
+      }
+
+      p.italic {
+        font-style: italic;
+      }
+
+      p.oblique {
+        font-style: oblique;
+      }
+      h1 {
+        font-size: 40px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+      .google {
+        font-family: "Sofia", sans-serif;
+      }
+
+      p.a {
+        font: 20px Arial, sans-serif;
+      }
+      p.b {
+        font: italic bold 12px/30px Georgia, serif;
+      }
+
+      ul.a {
+        list-style-type: circle;
+      }
+
+      ul.b {
+        list-style-type: square;
+      }
+
+      ol.c {
+        list-style-type: upper-roman;
+      }
+
+      ol.d {
+        list-style-type: lower-alpha;
+      }
+
+      a.one:link {
+        color: #ff0000;
+      }
+      a.one:visited {
+        color: #0000ff;
+      }
+      a.one:hover {
+        color: #ffcc00;
+      }
+
+      a.two:link {
+        color: #ff0000;
+      }
+      a.two:visited {
+        color: #0000ff;
+      }
+      a.two:hover {
+        font-size: 150%;
+      }
+
+      a.three:link {
+        color: #ff0000;
+      }
+      a.three:visited {
+        color: #0000ff;
+      }
+      a.three:hover {
+        background: #66ff66;
+      }
+
+      a.four:link {
+        color: #ff0000;
+      }
+      a.four:visited {
+        color: #0000ff;
+      }
+      a.four:hover {
+        font-family: monospace;
+      }
+
+      a.five:link {
+        color: #ff0000;
+        text-decoration: none;
+      }
+      a.five:visited {
+        color: #0000ff;
+        text-decoration: none;
+      }
+      a.five:hover {
+        text-decoration: underline;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS font-family</h1>
+    <p class="p1">Этот параграф выделен шрифтом Times New Roman.</p>
+    <p class="p2">Этот параграф выделен шрифтом Arial.</p>
+    <p class="p3">Этот параграф выделен шрифтом Lucida Console.</p>
+    <p class="normal">Это параграф в обычном стиле.</p>
+    <p class="italic">Это параграф курсивом.</p>
+    <p class="oblique">Это параграф наклонным стилем.</p>
+    <h1>Это заголовок 1</h1>
+    <h2>Это заголовок 2</h2>
+    <p>Это параграф.</p>
+    <p>Это другой параграф.</p>
+    <div class="google">
+      <h1>Sofia шрифт</h1>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>123456790</p>
+    </div>
+
+    <p class="a">
+      Это параграф. Размер шрифта установлен на 20 пикселей, семейство шрифтов -
+      Arial.
+    </p>
+
+    <p class="b">
+      Это параграф. Шрифт выделен курсивом и полужирным шрифтом, размер шрифта -
+      12 пикселей, высота строки - 30 пикселей, семейство шрифтов - Georgia.
+    </p>
+    <ul class="a">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Coca Cola</li>
+    </ul>
+
+    <ul class="b">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Coca Cola</li>
+    </ul>
+
+    <p>Пример упорядоченных списков:</p>
+    <ol class="c">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Coca Cola</li>
+    </ol>
+
+    <ol class="d">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Coca Cola</li>
+    </ol>
+
+    <h2>Ссылка в виде кнопки</h2>
+    <p>Ссылка стилизуется в виде кнопки:</p>
+    <a href="index.html" target="_blank">Это ссылка</a>
+
+    <p>Наведите указатель мыши на ссылки и посмотрите, как они меняют макет:</p>
+
+    <p>
+      <b
+        ><a class="one" href="default.asp" target="_blank"
+          >Эта ссылка меняет цвет</a
+        ></b
+      >
+    </p>
+    <p>
+      <b
+        ><a class="two" href="default.asp" target="_blank"
+          >Эта ссылка изменяет размер шрифта</a
+        ></b
+      >
+    </p>
+    <p>
+      <b
+        ><a class="three" href="default.asp" target="_blank"
+          >Эта ссылка меняет цвет фона</a
+        ></b
+      >
+    </p>
+    <p>
+      <b
+        ><a class="four" href="default.asp" target="_blank"
+          >Эта ссылка изменяет семейство шрифтов</a
+        ></b
+      >
+    </p>
+    <p>
+      <b
+        ><a class="five" href="default.asp" target="_blank"
+          >Эта ссылка меняет оформление текста</a
+        ></b
+      >
+    </p>
+
+    <p>Наведите курсор на слова, чтобы изменить курсор.</p>
+    <span style="cursor: auto">auto</span><br />
+    <span style="cursor: crosshair">crosshair</span><br />
+    <span style="cursor: default">default</span><br />
+    <span style="cursor: e-resize">e-resize</span><br />
+    <span style="cursor: help">help</span><br />
+    <span style="cursor: move">move</span><br />
+    <span style="cursor: n-resize">n-resize</span><br />
+    <span style="cursor: ne-resize">ne-resize</span><br />
+    <span style="cursor: nw-resize">nw-resize</span><br />
+    <span style="cursor: pointer">pointer</span><br />
+    <span style="cursor: progress">progress</span><br />
+    <span style="cursor: s-resize">s-resize</span><br />
+    <span style="cursor: se-resize">se-resize</span><br />
+    <span style="cursor: sw-resize">sw-resize</span><br />
+    <span style="cursor: text">text</span><br />
+    <span style="cursor: w-resize">w-resize</span><br />
+    <span style="cursor: wait">wait</span><br />
+
+    <div style="overflow-x: auto">
+      <table>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Points</th>
+          <th>Points</th>
+          <th>Points</th>
+          <th>Points</th>
+          <th>Points</th>
+          <th>Points</th>
+          <th>Points</th>
+          <th>Points</th>
+          <th>Points</th>
+          <th>Points</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+          <td>50</td>
+          <td>50</td>
+          <td>50</td>
+          <td>50</td>
+          <td>50</td>
+          <td>50</td>
+          <td>50</td>
+          <td>50</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+          <td>94</td>
+          <td>94</td>
+          <td>94</td>
+          <td>94</td>
+          <td>94</td>
+          <td>94</td>
+          <td>94</td>
+          <td>94</td>
+          <td>94</td>
+        </tr>
+        <tr>
+          <td>Adam</td>
+          <td>Johnson</td>
+          <td>67</td>
+          <td>67</td>
+          <td>67</td>
+          <td>67</td>
+          <td>67</td>
+          <td>67</td>
+          <td>67</td>
+          <td>67</td>
+          <td>67</td>
+          <td>67</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

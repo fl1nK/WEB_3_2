@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      p {
+        outline-color: red;
+      }
+
+      p.dotted {
+        outline-style: dotted;
+      }
+      p.dashed {
+        outline-style: dashed;
+      }
+      p.solid {
+        outline-style: solid;
+      }
+      p.double {
+        outline-style: double;
+      }
+      p.groove {
+        outline-style: groove;
+      }
+      p.ridge {
+        outline-style: ridge;
+      }
+      p.inset {
+        outline-style: inset;
+      }
+      p.outset {
+        outline-style: outset;
+      }
+
+      p.ex1 {
+        border: 1px solid black;
+        outline-style: solid;
+        outline-color: red;
+        outline-width: thin;
+      }
+
+      p.ex2 {
+        border: 1px solid black;
+        outline-style: solid;
+        outline-color: red;
+        outline-width: medium;
+      }
+
+      p.ex3 {
+        border: 1px solid black;
+        outline-style: solid;
+        outline-color: red;
+        outline-width: thick;
+      }
+
+      p.ex4 {
+        border: 1px solid black;
+        outline-style: solid;
+        outline-color: red;
+        outline-width: 4px;
+      }
+
+      p.ex11 {
+        outline: dashed;
+      }
+      p.ex22 {
+        outline: dotted red;
+      }
+      p.ex33 {
+        outline: 5px solid yellow;
+      }
+      p.ex44 {
+        outline: thick ridge pink;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Свойство outline-style</h2>
+
+    <p class="dotted">Точечный контур</p>
+    <p class="dashed">Пунктирный контур</p>
+    <p class="solid">Сплошной контур</p>
+    <p class="double">Двойной контур</p>
+    <p class="groove">
+      Рифленый контур. Эффект зависит от значения цвета контура.
+    </p>
+    <p class="ridge">
+      Ребристый контур. Эффект зависит от значения цвета контура.
+    </p>
+    <p class="inset">
+      Внутренний контур. Эффект зависит от значения цвета контура.
+    </p>
+    <p class="outset">
+      Наружный контур. Эффект зависит от значения цвета контура.
+    </p>
+
+    <h2>Свойство outline-width</h2>
+
+    <p class="ex1">Тонкий контур.</p>
+    <p class="ex2">Средний контур.</p>
+    <p class="ex3">Толстый контур.</p>
+    <p class="ex4">Контур толщиной в 4px.</p>
+
+    <h2>Свойство outline</h2>
+
+    <p class="ex11">Пунктирный контур.</p>
+    <p class="ex22">Точечный красный контур.</p>
+    <p class="ex33">Сплошной 5px желтый контур.</p>
+    <p class="ex44">Толстый ребристый розовый контур.</p>
+
+    <h2>Свойство outline-offset</h2>
+
+    <p
+      style="
+        margin: 30px;
+        background: yellow;
+        border: 1px solid black;
+        outline: 1px solid red;
+        outline-offset: 15px;
+      "
+    >
+      Контур этого параграфа составляет 15 пикселей за пределами границы.
+    </p>
+  </body>
+</html>
