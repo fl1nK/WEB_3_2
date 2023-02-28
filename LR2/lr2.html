@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Лаб-2</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <style>
+    /*Селектор тегу*/
+    main {
+      height: 700px;
+      background-color: beige;
+      padding-top: 10px;
+    }
+
+    /*Селектор класу*/
+    .lr2-class {
+      margin: 30px;
+      color: blue;
+      background: yellow;
+      font-style: italic;
+      font-size: 16px;
+      border-radius: 25px;
+      border: 1px solid black;
+      outline: 1px solid red;
+      outline-offset: 15px;
+    }
+
+    /*Селектор індетифікаторів*/
+    #lr2-id {
+      width: 100%;
+      margin-bottom: 20px;
+      border-radius: 25px;
+      border: 1px solid black;
+    }
+
+    table,
+    th,
+    td {
+      border: 2px solid black;
+    }
+
+    th {
+      text-align: center;
+    }
+
+    td {
+      height: 50px;
+      vertical-align: bottom;
+    }
+
+    /*Інші селектори*/
+    b + i {
+      color: red; /* Червоний колір тексту */
+    }
+
+    a[href^="#"] {
+      color: gold;
+    }
+
+    /*CSS продвинутий*/
+    #animated_div {
+      width: 70px;
+      height: 47px;
+      background: #92b901;
+      color: #ffffff;
+      position: relative;
+      font-weight: bold;
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      animation-name: animated_div;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes animated_div {
+      0% {
+        transform: rotate(0deg);
+        left: 0px;
+      }
+      25% {
+        transform: rotate(20deg);
+        left: 0px;
+      }
+      50% {
+        transform: rotate(0deg);
+        left: 500px;
+      }
+      55% {
+        transform: rotate(0deg);
+        left: 500px;
+      }
+      70% {
+        transform: rotate(0deg);
+        left: 500px;
+        background: #1ec7e6;
+      }
+      100% {
+        transform: rotate(-360deg);
+        left: 0px;
+      }
+    }
+  </style>
+
+  <body>
+    <header>
+      <!-- place navbar here -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">ЛОГОТИП</a>
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#nav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Головна</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="function.html">Бізнес-логіки</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="lr2.html">Lab2</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="dropdownId"
+                  data-bs-toggle="dropdown"
+                  >Категорії</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                  <a class="dropdown-item" href="#">Категорія1</a>
+                  <a class="dropdown-item" href="#">Категорія2</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <p class="lr2-class">
+        Застосувано селектор класу class="lr2-class" margin: 30px; color: blue;
+        background: yellow; font-style: italic; font-size: 16px; border: 1px
+        solid black; outline: 1px solid red; outline-offset: 15px;
+      </p>
+
+      <table id="lr2-id">
+        <tr>
+          <th>Голова</th>
+          <th>Голова</th>
+        </tr>
+        <tr>
+          <td><b>Сусідні </b><i>селектори</i></td>
+          <td>Зеленский</td>
+        </tr>
+        <tr>
+          <td>Васька</td>
+          <td>Голобородько</td>
+        </tr>
+      </table>
+
+      <div id="animated_div">CSS</div>
+    </main>
+
+    <footer>
+      <div class="container-fluid bg-dark">
+        <div class="text-center" style="padding: 20px">
+          <a
+            href="#"
+            class="text-uppercase text-light text-decoration-none"
+            style="padding: 10px"
+            >Twitter</a
+          >
+          <a
+            href="#"
+            class="text-uppercase text-light text-decoration-none"
+            style="padding: 10px"
+            >Facebook</a
+          >
+          <a
+            href="#"
+            class="text-uppercase text-light text-decoration-none"
+            style="padding: 10px"
+            >Telegram</a
+          >
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+  </body>
+</html>

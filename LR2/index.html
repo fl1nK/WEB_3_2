@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Головна</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!-- place navbar here -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">ЛОГОТИП</a>
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#nav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Головна</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="function.html">Бізнес-логіки</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="lr2.html">Lab2</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="dropdownId"
+                  data-bs-toggle="dropdown"
+                  >Категорії</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                  <a class="dropdown-item" href="#">Категорія1</a>
+                  <a class="dropdown-item" href="#">Категорія2</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <h1>Знайди друзів для веселого проводженя часу!</h1>
+            <h5>
+              Завдяки нашому веб-сервісу, ви можете оголошувати івенти на які
+              хочете запросити зацікавлених людей вашою подією.
+            </h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center">
+        <img src="img/img2.jpg" class="img-fluid" />
+      </div>
+      <br />
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <form class="col-lg-8">
+            <legend>Форма для створення івенту</legend>
+            <div class="mb-3">
+              <label for="input1" class="form-label">Назва події</label>
+              <input
+                type="text"
+                class="form-control"
+                id="input1"
+                placeholder="Піти на пікнік..."
+              />
+            </div>
+            <div class="mb-3">
+              <label for="textarea1" class="form-label">Опис</label>
+              <textarea class="form-control" id="textarea1" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <select class="form-select">
+                <option selected>Вибрати категорію для події</option>
+                <option value="1">Категорія1</option>
+                <option value="2">Категорія2</option>
+                <option value="3">Категорія3</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <div class="input-group date" data-provide="datepicker">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Вказати дату проведення"
+                />
+                <div class="input-group-addon">
+                  <span class="glyphicon glyphicon-th"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-grid gap-1 col-4 mx-auto">
+              <button type="submit" class="btn btn-primary">Створити</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <br /><br />
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h4>Розробники які брали участь у створені цього проекту.</h4>
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Прізвище</th>
+                  <th scope="col">Ім'я</th>
+                  <th scope="col">Група</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Філоненко</td>
+                  <td>Владислав</td>
+                  <td>ІТ-03</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Кобилинський</td>
+                  <td>Віктор</td>
+                  <td>ІТ-03</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Очкас</td>
+                  <td>Дмитро</td>
+                  <td>ІТ-03</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container-fluid bg-dark">
+        <div class="text-center" style="padding: 20px">
+          <a
+            href="#"
+            class="text-uppercase text-light text-decoration-none"
+            style="padding: 10px"
+            >Twitter</a
+          >
+          <a
+            href="#"
+            class="text-uppercase text-light text-decoration-none"
+            style="padding: 10px"
+            >Facebook</a
+          >
+          <a
+            href="#"
+            class="text-uppercase text-light text-decoration-none"
+            style="padding: 10px"
+            >Telegram</a
+          >
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+  </body>
+</html>
