@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Розмітка з плаваючими блоками</title>
+        <style>
+            table {
+                height: 200px;
+                border-collapse: collapse;
+                margin: 0 auto;
+            }
+
+            th,
+            td {
+                border: 1px solid black;
+                padding: 10px;
+            }
+
+            .orange {
+                background-color: orange;
+            }
+
+            .blue {
+                background-color: blue;
+                color: white;
+            }
+
+            #b2,
+            #b5 {
+                width: 10%;
+            }
+
+            #b4 {
+                height: 80%;
+            }
+
+            #b1,
+            #b3 {
+                height: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <table width="800">
+            <tbody>
+                <tr>
+                    <td id="b2" class="orange" rowspan="3">2</td>
+                    <td id="b1" class="blue">1</td>
+                </tr>
+                <tr>
+                    <td id="b4">4</td>
+                </tr>
+                <tr>
+                    <td id="b3" class="blue">3</td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+
+        <table width="100%">
+            <tbody>
+                <tr>
+                    <td id="b2" class="orange" rowspan="3">2</td>
+                    <td id="b1" class="blue">1</td>
+                </tr>
+                <tr>
+                    <td id="b4">4</td>
+                </tr>
+                <tr>
+                    <td id="b3" class="blue">3</td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+
+        <div style="width: 900px">
+            <div class="block blue" style="width: 100%; height: 100px">1</div>
+            <div style="width: 100%; height: 200px">
+                <div class="block orange" style="width: 300px; height: 200px; float: left">5</div>
+                <div class="block" style="width: 300px; height: 200px; float: left">4</div>
+                <div class="block orange" style="width: 300px; height: 200px; float: left">2</div>
+            </div>
+            <div class="block blue" style="width: 100%; height: 100px">3</div>
+        </div>
+        <br />
+
+        <div style="width: 100%">
+            <div class="blue" style="width: 100%; height: 100px">1</div>
+            <div style="width: 100%; height: 200px">
+                <div class="orange" style="width: 20%; height: 200px; float: left">5</div>
+                <div style="width: 60%; height: 200px; float: left">4</div>
+                <div class="orange" style="width: 20%; height: 200px; float: left">2</div>
+            </div>
+            <div class="blue" style="width: 100%; height: 100px">3</div>
+        </div>
+    </body>
+</html>
