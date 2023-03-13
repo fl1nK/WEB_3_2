@@ -1,0 +1,52 @@
+body {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+h1 {
+	font-size: 56px;
+}
+p {
+	font-size: 18px;
+}
+.text-gray {
+	color: #707070;
+}
+
+.text-nav-link{
+	color:black
+}
+
+.text-nav-link:hover{
+	color: #707070;
+}
+
+.nav-btn {
+	margin: 12px;
+	border-radius: 30px;
+
+	height: 54px;
+	padding: 0 24px;
+}
+
+.main-btn {
+	margin-right: 24px;
+	border-radius: 40px;
+
+	height: 66px;
+	padding: 0 36px;
+}
+
+.input-form{
+	height: 50px;
+	padding: 0 20px;
+	background: #F9F9FF;
+	border-radius: 50px;
+}
+
+.input-button{
+	height: 50px;
+	border-radius: 50px;
+}
