@@ -2,66 +2,81 @@
 <html>
 
 <head>
-    <title>Приклад спливаючої підказки</title>
+    <title>Гістограма чисел</title>
     <style>
-        .tooltip {
-            position: relative;
-            display: inline-block;
-            border-bottom: 1px dotted black;
+        .chart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
         }
 
-        .tooltip .tooltiptext {
-            visibility: hidden;
-            width: 120px;
-            background-color: black;
-            color: #fff;
-            text-align: center;
-            border-radius: 6px;
-            padding: 5px 0;
-            position: absolute;
-            z-index: 1;
-            bottom: 150%;
-            left: 50%;
-            margin-left: -60px;
-            opacity: 0;
-            transition: opacity 0.3s;
+        #bars{
+            height: 200px;
+            display: flex;
         }
 
-        .tooltip .tooltiptext::after {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: black transparent transparent transparent;
+        .bar {
+            margin: 5px;
+            display: flex;
+            flex-flow: row wrap;
+            height: 200px;
+            width: 50px;
+            background-color: #2196F3;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            transition: height 0.3s;
         }
 
-        .tooltip:hover .tooltiptext {
-            visibility: visible;
-            opacity: 1;
+        input[type="text"] {
+            font-size: 16px;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
         }
     </style>
 </head>
 
 <body>
-    <p title="Це приклад підказки">Наведіть мишу на цей текст, щоб побачити підказку.</p>
-    <h1>Приклад спливаючої підказки</h1>
-    <p>Це текст на сторінці.</p>
-    <p>
-        <span class="tooltip" onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)">Це фрагмент тексту з
-            підказкою<span class="tooltiptext">Це підказка для фрагменту тексту.</span></span>.
-    </p>
-    <p>Це ще один текст на сторінці.</p>
+    <h1>Гістограма чисел</h1>
+    <div class="chart">
+        <div id="bars">
+        </div>
+        <input type="text" id="data" placeholder="Введіть числа через кому">
+        <button onclick="drawHistogram()">Побудувати гістограму</button>
+    </div>
 
     <script>
-        function showTooltip(element) {
-            element.querySelector(".tooltiptext").style.visibility = "visible";
-        }
+        function drawHistogram() {
+            const dataInput = document.getElementById('data');
+            const data = dataInput.value.split(',').map(Number);
 
-        function hideTooltip(element) {
-            element.querySelector(".tooltiptext").style.visibility = "hidden";
+            const max = Math.max(...data);
+
+            const bars = document.getElementById('bars');
+            bars.innerHTML = '';
+            for (let i = 0; i < data.length; i++) {
+                const bar = document.createElement('div');
+                bar.className = 'bar';
+                bar.style.height = `${data[i] / max * 100}%`;
+                bar.innerText = data[i];
+                bars.appendChild(bar);
+            }
+            dataInput.value = '';
         }
     </script>
 </body>
