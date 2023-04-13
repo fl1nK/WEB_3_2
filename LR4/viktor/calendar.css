@@ -1,0 +1,80 @@
+table {
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+td {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: #e6e6e6;
+}
+
+.selected {
+    background-color: #4CAF50;
+    color: white;
+}
+.inactive{
+    background-color: #efefef;
+    color: #6e6e6e;
+}
+
+.calendar {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    padding: 10px;
+    display: none;
+}
+
+.calendar table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.calendar tr:first-child td:hover{
+    background-color: #fff;
+    cursor:default;
+}
+
+.calendar td {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.calendar td.today {
+    background-color: #1a8cb4;
+    color: white;
+}
+
+.calendar td.selected {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.calendar button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.calendar button:hover {
+    background-color: #0056b3;
+}
+
+#name{
+    text-transform: capitalize;
+}

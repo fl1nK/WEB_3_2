@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab4 Task1</title>
+</head>
+<body>
+<label for="count">Введіть кількість елементів масиву:</label>
+<input type="number" id="count" min="1" value="1">
+<button id="generate-button">Згенерувати масив</button>
+<p id="array"></p>
+<button id="calculate-button" style="display: none">Обчислити суму</button>
+<button id="sort-button" style="display: none">Відсортувати</button>
+<p id="output"></p>
+<script>
+    let array;
+
+    document.querySelector("#generate-button").onclick = () => {
+        let n = parseInt(document.getElementById("count").value);
+        array = generate(n);
+
+        document.getElementById("array").innerText = array.join(' ');
+        document.querySelector("#calculate-button").style.display = 'block';
+        document.querySelector("#sort-button").style.display = 'block';
+        document.getElementById("output").innerText = "";
+    }
+
+    document.querySelector("#calculate-button").onclick = () => {
+        let sum = calculate(array);
+        if (sum === 0) {
+            sum = calculate(array.reverse());
+        }
+
+        document.getElementById("output").innerText = "Сума: " + sum;
+    }
+
+    document.querySelector("#sort-button").onclick = () => {
+        let arr = quickSort(array);
+        document.getElementById("output").innerText = "Відсортований масив: " + arr.join(' ');
+    }
+
+    function generate(n) {
+        let arr = [];
+        for (let i = 0; i < n; i++) {
+            arr.push(Math.floor(Math.random() * 9) + 1);
+        }
+
+        return arr;
+    }
+
+    function calculate(arr) {
+        const min = Math.min.apply(null, arr);
+        const max = Math.max.apply(null, arr);
+        let sum = 0;
+        let start = false;
+        let end = false;
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === min) {
+                start = true;
+            }
+            if (start && !end) {
+                sum += arr[i];
+            }
+            if (arr[i] === max) {
+                end = true;
+            }
+        }
+
+        return sum;
+    }
+
+    function quickSort(arr) {
+        if (arr.length <= 1) {
+            return arr;
+        }
+
+        let pivot = arr[0];
+        let left = [];
+        let right = [];
+
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] < pivot) {
+                left.push(arr[i]);
+            } else {
+                right.push(arr[i]);
+            }
+        }
+        return quickSort(left).concat(pivot, quickSort(right));
+    }
+</script>
+</body>
+</html>

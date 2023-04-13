@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lab4 Task2</title>
+    <link rel="stylesheet" href="calendar.css">
+</head>
+<body>
+<h1>Календар на Javascript</h1>
+<form>
+    <label for="date">Виберіть дату:</label>
+    <input type="text" id="date" name="date" readonly>
+    <input type="button" value="Відкрити календар" onclick="openCalendar()">
+</form>
+<div id="calendar" class="calendar">
+    <h2 id="name"></h2>
+    <table id="table"></table>
+    <button id="left">&lt;</button>
+    <button id="right">&gt;</button>
+    <button id="cancel">Відмінити</button>
+</div>
+<script>
+    const today = new Date();
+    let currentDate = new Date(today.getTime());
+    let selectedDate = null;
+    const calendar = document.querySelector('#calendar');
+
+    function openCalendar() {
+        if (calendar.style.display === 'block') {
+            calendar.style.display = 'none';
+        } else {
+            calendar.style.display = 'block';
+            renderCalendar(today);
+        }
+    }
+
+    function renderCalendar(date) {
+        date = new Date(date.getTime());
+        currentDate = date;
+        let name = document.querySelector('#name')
+        let year = date.getFullYear();
+        let month = date.getMonth();
+        let monthName = date.toLocaleString('en', {month: 'long'});
+        name.innerText = monthName + ' ' + year;
+        console.log(month, today.getMonth())
+
+        const table = document.querySelector('table');
+        table.innerHTML = getDaysRow();
+
+        let firstDayOfMonth = new Date(year, month, 1).getDay();
+        let daysInMonth = new Date(year, month + 1, 0).getDate();
+        let day = 1 - firstDayOfMonth;
+        for (let i = 0; i < 6; i++) {
+            const row = document.createElement('tr');
+            for (let j = 0; j < 7; j++) {
+                let newDate = new Date(date.getTime());
+                newDate.setDate(day);
+
+                const cell = document.createElement('td');
+                if (day > 0 && day <= daysInMonth) {
+                    cell.innerText = day;
+                    if (year === today.getFullYear() && month === today.getMonth() && day === today.getDate()) {
+                        cell.classList.add('today');
+                    }
+                    if (selectedDate && year === selectedDate.getFullYear() && month === selectedDate.getMonth() && day === selectedDate.getDate()) {
+                        cell.classList.add('selected');
+                    }
+
+                    cell.addEventListener('click', () => {
+                        selectDate(newDate);
+                    });
+                } else {
+                    if (day <= 0) {
+                        let days = new Date(year, month, 0).getDate();
+                        cell.innerText = days + day;
+                    } else {
+                        cell.innerText = day - daysInMonth;
+                    }
+                    cell.classList.add('inactive');
+                }
+                row.appendChild(cell);
+                day++;
+            }
+            table.appendChild(row);
+        }
+
+
+    }
+
+    document.querySelector('#left').addEventListener('click', () => {
+        if (currentDate.getMonth() === 0) {
+            currentDate.setMonth(11);
+            renderCalendar(currentDate);
+        } else {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar(currentDate);
+        }
+    });
+
+    document.querySelector('#right').addEventListener('click', () => {
+        if (currentDate.getMonth() === 11) {
+            currentDate.setFullYear(currentDate.getFullYear() + 1)
+            currentDate.setMonth(0);
+            renderCalendar(currentDate);
+        } else {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar(currentDate);
+        }
+    });
+
+    document.querySelector('#cancel').addEventListener('click', () => {
+        selectedDate = null;
+        document.getElementById('date').value = '';
+        calendar.style.display = 'none';
+    });
+
+    function selectDate(date) {
+        selectedDate = date;
+        document.querySelector('#date').value = selectedDate.toLocaleDateString();
+        renderCalendar(date);
+    }
+
+    function getDaysRow() {
+        return `<tr>
+            <td>Su</td>
+            <td>Mo</td>
+            <td>Tu</td>
+            <td>We</td>
+            <td>Th</td>
+            <td>Fr</td>
+            <td>Sa</td>
+        </tr>`
+    }
+</script>
+</body>
+</html>
